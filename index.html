@@ -1,4 +1,30 @@
-html<!DOCTYPE html>
+html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards Acessíveis - Projeto Integrador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Barra de Acessibilidade -->
+    <header>
+        <nav aria-label="Barra de Acessibilidade">
+            <div class="acessibilidade-toolbar">
+                <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+                <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
+                <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+            </div>
+        </nav>
+        <h1>Plataforma de Estudo Inclusiva</h1>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="conteudo-principal">html<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -39,13 +65,34 @@ html<!DOCTYPE html>
 <p>Organela celular responsável pela respiração celular e produção de energia (ATP).</p>
 </article>
 </div>
-</section>
-</main>
+        <section aria-labelledby="titulo-flashcards">
+            <h2 id="titulo-flashcards">Flashcards de Biologia-</h2>
+            <div class="cards-container">
+                <!-- Card 1 -->
+                <article class="card" tabindex="0">
+                    <h3>O que é Fotossíntese?</h3>
+                    <img src="https://via.placeholder.com/300x150"
+                        alt="Diagrama mostrando uma planta absorvendo luz solar, água do solo e gás carbônico do ar para produzir oxigênio e glicose.">
+                    <p>Processo realizado pelas plantas para fabricação de seu próprio alimento através da luz solar.
+                    </p>
+                </article>
 
-<footer>
-<p>&copy; 2026 Projeto Integrador - Acessibilidade Digital</p>
-</footer>
+                <!-- Card 2 -->
+                <article class="card" tabindex="0">
+                    <h3>O que é Mitocôndria?</h3>
+                    <img src="https://via.placeholder.com/300x150"
+                        alt="Ilustração em corte transversal de uma mitocôndria mostrando suas dobras internas chamadas cristas.">
+                    <p>Organela celular responsável pela respiração celular e produção de energia (ATP).</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
-<script src="script.js"></script>
+    <footer>
+        <p>&copy; 2026 Projeto Integrador - Acessibilidade Digital</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
