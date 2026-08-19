@@ -1,98 +1,110 @@
-html
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards Acessíveis - Projeto Integrador</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Barra de Acessibilidade -->
-    <header>
-        <nav aria-label="Barra de Acessibilidade">
-            <div class="acessibilidade-toolbar">
-                <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
-                <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
-                <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
-            </div>
-        </nav>
-        <h1>Plataforma de Estudo Inclusiva</h1>
-    </header>
-
-    <!-- Conteúdo Principal -->
-    <main id="conteudo-principal">html<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flashcards Acessíveis - Projeto Integrador</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introdução à Óptica, Robótica e Tecnociência - Acessível</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Barra de Acessibilidade -->
-<header>
-<nav aria-label="Barra de Acessibilidade">
-<div class="acessibilidade-toolbar">
-<button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
-<button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
-<button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
-</div>
-</nav>
-<h1>Plataforma de Estudo Inclusiva</h1>
-</header>
+  <!-- Atalho de Acessibilidade para Navegação por Teclado -->
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
 
-<!-- Conteúdo Principal -->
-<main id="conteudo-principal">
-<section aria-labelledby="titulo-flashcards">
-<h2 id="titulo-flashcards">Flashcards de Biologia-</h2>
-<div class="cards-container">
-<!-- Card 1 -->
-<article class="card" tabindex="0">
-<h3>O que é Fotossíntese?</h3>
-<img src="https://via.placeholder.com/300x150" alt="Diagrama mostrando uma planta absorvendo luz solar, água do solo e gás carbônico do ar para produzir oxigênio e glicose.">
-<p>Processo realizado pelas plantas para fabricação de seu próprio alimento através da luz solar.</p>
-</article>
+  <!-- Barra Acessível Superior -->
+  <header role="banner">
+    <div class="header-container">
+      <h1>Óptica, Robótica & Tecnociência</h1>
+      
+      <nav aria-label="Barra de Ferramentas de Acessibilidade">
+        <div class="toolbar" role="region" aria-label="Controles de Acessibilidade Visual e Sonora">
+          <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+          <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
+          <button id="btn-contraste" aria-label="Alternar para modo de alto contraste">Alto Contraste</button>
+          <button id="btn-voz" aria-label="Ligar ou desligar leitor de voz">Ouvir Texto 🔊</button>
+        </div>
+      </nav>
+    </div>
 
-<!-- Card 2 -->
-<article class="card" tabindex="0">
-<h3>O que é Mitocôndria?</h3>
-<img src="https://via.placeholder.com/300x150" alt="Ilustração em corte transversal de uma mitocôndria mostrando suas dobras internas chamadas cristas.">
-<p>Organela celular responsável pela respiração celular e produção de energia (ATP).</p>
-</article>
-</div>
-        <section aria-labelledby="titulo-flashcards">
-            <h2 id="titulo-flashcards">Flashcards de Biologia-</h2>
-            <div class="cards-container">
-                <!-- Card 1 -->
-                <article class="card" tabindex="0">
-                    <h3>O que é Fotossíntese?</h3>
-                    <img src="https://via.placeholder.com/300x150"
-                        alt="Diagrama mostrando uma planta absorvendo luz solar, água do solo e gás carbônico do ar para produzir oxigênio e glicose.">
-                    <p>Processo realizado pelas plantas para fabricação de seu próprio alimento através da luz solar.
-                    </p>
-                </article>
+    <!-- Navegação Secundária -->
+    <nav class="nav-principal" aria-label="Navegação Principal do Site">
+      <ul>
+        <li><a href="#optica">Introdução à Óptica</a></li>
+        <li><a href="#robotica">Robótica</a></li>
+        <li><a href="#tecnociencia">Tecnociência</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <!-- Card 2 -->
-                <article class="card" tabindex="0">
-                    <h3>O que é Mitocôndria?</h3>
-                    <img src="https://via.placeholder.com/300x150"
-                        alt="Ilustração em corte transversal de uma mitocôndria mostrando suas dobras internas chamadas cristas.">
-                    <p>Organela celular responsável pela respiração celular e produção de energia (ATP).</p>
-                </article>
-            </div>
-        </section>
-    </main>
+  <!-- Conteúdo Principal -->
+  <main id="conteudo-principal" tabindex="-1">
 
-    <footer>
-        <p>&copy; 2026 Projeto Integrador - Acessibilidade Digital</p>
-    </footer>
+    <!-- SEÇÃO 1: INTRODUÇÃO À ÓPTICA -->
+    <section id="optica" class="secao-conteudo" aria-labelledby="titulo-optica">
+      <h2 id="titulo-optica">1. Introdução à Óptica</h2>
+      <p class="leitura-texto">
+        A <strong>Óptica</strong> é o ramo da Física que estuda a luz, seus fenômenos de propagação, reflexão, refração e sua interação com a matéria. Compreender a luz é fundamental para entender o funcionamento da visão humana e o desenvolvimento de tecnologias do cotidiano.
+      </p>
 
-    <script src="script.js"></script>
+      <div class="cards-grid">
+        <article class="card" tabindex="0" aria-labelledby="card1-titulo">
+          <h3 id="card1-titulo">Reflexão da Luz</h3>
+          <img src="https://via.placeholder.com/400x200/003366/ffffff?text=Reflexao+da+Luz" alt="Diagrama explicativo sobre reflexão da luz em um espelho plano, mostrando o raio incidente, o raio refletido e o ângulo de incidência igual ao de reflexão.">
+          <p class="leitura-texto">Ocorre quando a luz atinge uma superfície e retorna ao meio de origem, permitindo a formação de imagens em espelhos.</p>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="card2-titulo">
+          <h3 id="card2-titulo">Refração da Luz</h3>
+          <img src="https://via.placeholder.com/400x200/003366/ffffff?text=Refracao+da+Luz" alt="Ilustração de um raio de luz passando do ar para a água, mostrando a mudança de velocidade e o desvio na trajetória da luz.">
+          <p class="leitura-texto">Fenômeno em que a luz muda de velocidade ao passar de um meio transparente para outro, como do ar para a água ou para lentes de óculos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: ESPAÇO PARA ROBÓTICA -->
+    <section id="robotica" class="secao-conteudo" aria-labelledby="titulo-robotica">
+      <h2 id="titulo-robotica">2. Robótica e Sensores Ópticos</h2>
+      <p class="leitura-texto">
+        A robótica moderna depende intensamente dos princípios da óptica. Sensores ópticos, como LiDAR e câmeras com visão computacional, permitem que robôs autônomos e carros inteligentes "enxerguem" e compreendam o ambiente ao seu redor em tempo real.
+      </p>
+      
+      <div class="destaque-box" tabindex="0">
+        <h3>Aplicações Práticas na Robótica:</h3>
+        <ul>
+          <li class="leitura-texto"><strong>Sensores de linha infravermelhos:</strong> Permitem que robôs sigam trajetórias pré-determinadas.</li>
+          <li class="leitura-texto"><strong>Sistemas LiDAR:</strong> Utilizam feixes de laser óptico para mapeamento tridimensional de áreas.</li>
+          <li class="leitura-texto"><strong>Visão Computacional:</strong> Câmeras com lentes de alta precisão identificam objetos e obstáculos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: ESPAÇO PARA TECNOCIÊNCIA -->
+    <section id="tecnociencia" class="secao-conteudo" aria-labelledby="titulo-tecnociencia">
+      <h2 id="titulo-tecnociencia">3. Tecnociência e Futuro da Acessibilidade</h2>
+      <p class="leitura-texto">
+        A união entre ciência, tecnologia e óptica revoluciona a saúde e a inclusão social. A tecnociência desenvolve dispositivos assistivos avançados que ampliam a autonomia de pessoas com deficiência visual severa ou cegueira.
+      </p>
+
+      <div class="cards-grid">
+        <article class="card" tabindex="0" aria-labelledby="card3-titulo">
+          <h3 id="card3-titulo">Óculos Inteligentes Assistivos</h3>
+          <p class="leitura-texto">Dispositivos com câmeras acopladas que leem textos, reconhecem rostos e descrevem o ambiente por áudio em tempo real para o usuário.</p>
+        </article>
+
+        <article class="card" tabindex="0" aria-labelledby="card4-titulo">
+          <h3 id="card4-titulo">Cirurgia a Laser e Lentes Avançadas</h3>
+          <p class="leitura-texto">Avanços biomédicos que utilizam tecnologia óptica de alta precisão para correção cirúrgica de problemas refrativos e preservação da visão.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2026 Projeto Integrador - Óptica, Robótica e Tecnociência Acessível.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
 
