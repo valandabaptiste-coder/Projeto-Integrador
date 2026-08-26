@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</title>
     <style>
-        /* Estilos Globais e Acessibilidade */
         :root {
             --bg-color: #ffffff;
             --text-color: #222222;
@@ -25,7 +24,6 @@
             padding: 20px;
         }
 
-        /* Modo Alto Contraste */
         body.alto-contraste {
             --bg-color: #000000;
             --text-color: #ffff00;
@@ -34,7 +32,6 @@
             --border-color: #ffff00;
         }
 
-        /* Barra de Ferramentas de Acessibilidade */
         .toolbar-acessibilidade {
             position: sticky;
             top: 0;
@@ -59,7 +56,6 @@
             border-radius: 4px;
         }
 
-        /* Estrutura de Seções */
         section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -68,60 +64,35 @@
             border-radius: 8px;
         }
 
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             color: var(--primary-color);
         }
 
-        /* Tabelas Formatadas */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-
-        table, th, td {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: rgba(0,0,0,0.05);
-        }
-
-        /* Espaços Reservados para Mídias (Imagens e Vídeos) */
         .media-box {
-            border: 2px dashed var(--border-color);
-            padding: 20px;
+            border: 1px solid var(--border-color);
+            padding: 15px;
             text-align: center;
-            margin: 15px 0;
-            background-color: rgba(0,0,0,0.02);
+            margin: 20px 0;
+            background-color: #ffffff;
             border-radius: 6px;
         }
 
         .media-box img {
             max-width: 100%;
             height: auto;
+            border-radius: 4px;
         }
 
         figcaption {
             font-style: italic;
             margin-top: 8px;
             font-size: 0.9em;
-        }
-
-        .code-block {
-            background-color: #eef2f5;
-            padding: 10px;
-            border-left: 4px solid var(--primary-color);
-            font-family: monospace;
-            margin: 10px 0;
+            color: var(--text-color);
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRA DE FERRAMENTAS DE ACESSIBILIDADE -->
     <div class="toolbar-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
         <span><strong>Acessibilidade:</strong></span>
         <button class="btn-acessivel" onclick="alterarFonte(2)">A+</button>
@@ -134,175 +105,63 @@
 
         <h1>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</h1>
 
-        <!-- INTRODUÇÃO À ÓPTICA -->
+        <!-- SEÇÃO 1: INTRODUÇÃO À ÓPTICA -->
         <section>
             <h2>1. Introdução à Óptica</h2>
             <p>A Óptica é a área da Física que estuda os fenômenos luminosos e a interação da luz com a matéria. Compreender a propagação, a variação de intensidade e o comportamento das cores da luz permite o desenvolvimento de soluções de iluminação e tecnologias assistivas fundamentais para garantir autonomia, segurança e conforto visual a pessoas com baixa visão e deficiência visual.</p>
         </section>
 
-        <!-- ROBÓTICA: ATIVIDADE 2 (FADE-IN E FADE-OUT) -->
+        <!-- SEÇÃO 2: ATIVIDADE 2 - FADE IN E FADE OUT -->
         <section>
             <h2>2. Robótica e Controle de Luz (Atividade 2 - Fade-In e Fade-Out)</h2>
             
             <h3>Apresentação da Atividade</h3>
-            <p>O objetivo desta atividade foi compreender como controlar a intensidade luminosa de um LED utilizando uma simulação no Tinkercad. Durante o experimento, aprendemos como a programação e os componentes eletrônicos variam gradualmente o brilho de uma fonte de luz, simulando os efeitos de fade-in (aumento da intensidade) e fade-out (redução da intensidade).</p>
-            <p>No Tinkercad, foi montado um circuito composto por um Arduino Uno, um LED, um resistor de 220 Ω e fios de ligação. Utilizando a função <code>analogWrite()</code>, foi controlada a intensidade luminosa por meio da Modulação por Largura de Pulso (PWM). Ao iniciar a simulação, o LED aumentava seu brilho lentamente até o máximo e depois diminuía até apagar, repetindo o ciclo continuamente.</p>
+            <p>O objetivo desta atividade foi compreender como controlar a intensidade luminosa de um LED utilizando uma simulação no Tinkercad. Durante o experimento, aprendemos como a programação e os componentes eletrônicos variam gradualmente o brilho de uma fonte de luz, simulando os efeitos de fade-in e fade-out.</p>
 
-            <!-- ESPAÇOS RESERVADOS PARA MÍDIAS DE ROBÓTICA -->
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Imagem 1: Montagem do circuito no Tinkercad ]</strong></p>
-                <figcaption>Figura 1: Circuito no Tinkercad com Arduino Uno, LED e resistor de 220 Ω.</figcaption>
-            </div>
+            <figure class="media-box">
+                <img src="foto_led_simples_1.png" alt="Circuito de LED com Arduino no Tinkercad conectado ao pino 9">
+                <figcaption><strong>Figura 1:</strong> Montagem do circuito no Tinkercad utilizando o Arduino Uno, um LED vermelho e um resistor de 220 Ω conectados ao pino digital PWM ~9 para variação de brilho.</figcaption>
+            </figure>
 
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Imagem 2: Programação responsável pelo controle do LED ]</strong></p>
-                <figcaption>Figura 2: Código no Arduino utilizando a função analogWrite().</figcaption>
-            </div>
-
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Imagem 3: Simulação com a variação do brilho do LED ]</strong></p>
-                <figcaption>Figura 3: LED durante a simulação variando o brilho (Fade-In/Fade-Out).</figcaption>
-            </div>
-
-            <div class="media-box">
-                <p><strong>[ Insira aqui o Vídeo da simulação funcionando ]</strong></p>
-            </div>
+            <figure class="media-box">
+                <img src="foto_led_simples_2.png" alt="Simulação de controle de brilho no Tinkercad conectado ao pino 10">
+                <figcaption><strong>Figura 2:</strong> Simulação da variação gradual do brilho do LED (Fade-In e Fade-Out) utilizando modulação por largura de pulso (PWM) através do comando <code>analogWrite()</code>.</figcaption>
+            </figure>
 
             <h3>Explicação Científica</h3>
-            <p>O LED (Light Emitting Diode) é um diodo emissor de luz que transforma energia elétrica em luz pela emissão de fótons no semicondutor. O brilho foi controlado pela técnica de <strong>PWM (Pulse Width Modulation)</strong>, na qual a corrente liga e desliga milhares de vezes por segundo. Alterando a porcentagem de tempo em que a corrente permanece ativa (Duty Cycle), o olho humano percebe diferentes níveis de luminosidade:</p>
-            
-            <div class="code-block">
-                0 → 50 → 100 → 150 → 200 → 255 → 200 → 150 → 100 → 50 → 0
-            </div>
-
-            <h3>Relação com a Deficiência Visual</h3>
-            <p>A intensidade da luz afeta diretamente a percepção de pessoas com baixa visão. Algumas precisam de mais brilho para identificar objetos, enquanto outras apresentam sensibilidade à iluminação intensa (fotofobia). Uma transição suave previne o ofuscamento, reduz sombras e evita a fadiga ocular.</p>
-
-            <h3>Tecnologias Existentes</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tecnologia</th>
-                        <th>Fabricante / Marca</th>
-                        <th>Princípio Científico</th>
-                        <th>Benefício</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>OttLite Dimmable LED Task Lamp</td>
-                        <td>OttLite</td>
-                        <td>Variador de brilho gradual</td>
-                        <td>Melhora o detalhamento para leitura.</td>
-                    </tr>
-                    <tr>
-                        <td>HumanWare Reveal 16</td>
-                        <td>HumanWare</td>
-                        <td>Ampliação com iluminação LED</td>
-                        <td>Facilita a leitura e identificação de textos.</td>
-                    </tr>
-                    <tr>
-                        <td>Freedom Scientific RUBY HD</td>
-                        <td>Freedom Scientific</td>
-                        <td>Controle de iluminação e contraste</td>
-                        <td>Ampliador portátil para leitura e tarefas diárias.</td>
-                    </tr>
-                    <tr>
-                        <td>Lâmpadas Philips Hue</td>
-                        <td>Philips / Signify</td>
-                        <td>Controle eletrônico de intensidade</td>
-                        <td>Conforto e adequação de iluminação ambiente.</td>
-                    </tr>
-                    <tr>
-                        <td>Apple True Tone / Night Shift</td>
-                        <td>Apple</td>
-                        <td>Sensores e modulação de luz azul</td>
-                        <td>Redução da fadiga visual do usuário.</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Proposta: "Luz Acessível"</h3>
-            <p><strong>Problema:</strong> Dificuldade enfrentada por pessoas com baixa visão devido a oscilações ou inadequação da iluminação em ambientes de leitura e estudo.</p>
-            <p><strong>Funcionamento:</strong> Uma luminária inteligente composta por um microcontrolador Arduino, um sensor de luminosidade (LDR) e LEDs. O sensor capta a luz do ambiente e a IA ajusta via PWM o brilho ideal de acordo com a necessidade do usuário.</p>
-            
-            <div class="media-box">
-                <p><strong>[ Insira aqui o Desenho ou Esquema da Luminária Inteligente "Luz Acessível" ]</strong></p>
-                <figcaption>Esquema do projeto: Sensor LDR → Microcontrolador → Ajuste PWM → Iluminação Acessível.</figcaption>
-            </div>
+            <p>O LED é um diodo emissor de luz que transforma energia elétrica em fótons. Seu brilho foi controlado pela técnica de <strong>PWM (Pulse Width Modulation)</strong>, alterando a porcentagem de tempo em que a corrente permanece ativa (Duty Cycle) para que o olho humano perceba diferentes níveis de luminosidade.</p>
         </section>
 
-        <!-- ROBÓTICA: ATIVIDADE 3 (LED RGB E MISTURA DE CORES) -->
+        <!-- SEÇÃO 3: ATIVIDADE 3 - LED RGB -->
         <section>
             <h2>3. Robótica e Estudo das Cores (Atividade 3 - LED RGB)</h2>
-            <p><strong>Questão de Investigação:</strong> Como o estudo das cores contribui para o desenvolvimento de tecnologias que auxiliam pessoas com deficiência visual ou baixa visão?</p>
             
             <h3>Apresentação da Atividade</h3>
-            <p>O experimento utilizou o Tinkercad para simular o controle de um LED RGB com Arduino. Variando a intensidade individual dos canais Vermelho (Red), Verde (Green) e Azul (Blue) por meio do código, obtivemos diferentes combinações do espectro visível. A simulação demonstrou a aplicação prática da síntese aditiva para criar contrastes e sinalizações acessíveis.</p>
+            <p>O experimento utilizou o Tinkercad para simular o controle de um LED RGB com Arduino e potenciômetro. Variando a intensidade individual dos canais Vermelho, Verde e Azul por meio do código, obtivemos diferentes combinações de cores no espectro visível para aplicação em acessibilidade.</p>
 
-            <!-- ESPAÇOS RESERVADOS PARA MÍDIAS DA ATIVIDADE 3 -->
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Captura de Tela 1 do Tinkercad - LED RGB ]</strong></p>
-            </div>
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Captura de Tela 2 do Tinkercad - Código e Cores ]</strong></p>
-            </div>
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Captura de Tela 3 do Tinkercad - Simulação de Mistura ]</strong></p>
-            </div>
+            <figure class="media-box">
+                <img src="foto_led_rgb.png" alt="Circuito com LED RGB e Potenciômetro no Tinkercad">
+                <figcaption><strong>Figura 3:</strong> Circuito no Tinkercad com LED RGB de 4 pinos, resistor e potenciômetro conectados aos pinos PWM do Arduino Uno para controle da mistura aditiva de cores.</figcaption>
+            </figure>
 
             <h3>Explicação Científica</h3>
-            <p>O LED RGB reúne três diodos em um único componente. O modelo aditivo de cores (RGB) funciona combinando luzes primárias: o vermelho, o verde e o azul. A soma proporcional das três fontes em sua intensidade máxima produz a luz branca. Essas combinações são a base dos monitores, telas e sinalizadores de alta acessibilidade.</p>
-
-            <h3>Relação com a Deficiência Visual</h3>
-            <p>O alto contraste cromático (como combinações de amarelo e preto ou azul e branco) auxilia pessoas com acuidade visual reduzida a identificar portas, degraus e rotas de fuga. O estudo de cores permite selecionar combinações que otimizam a visibilidade sem causar confusão visual.</p>
+            <p>O LED RGB reúne três diodos (Vermelho, Verde e Azul) em um único componente. O modelo aditivo de cores (RGB) combina essas três luzes primárias para gerar qualquer cor do espectro, permitindo criar sinalizações visuais de alto contraste para pessoas com acuidade visual reduzida.</p>
         </section>
 
-        <!-- TECNOCIÊNCIA: EFEITO FOTOELÉTRICO E CONTEXTO HISTÓRICO -->
+        <!-- SEÇÃO 4: GRUPO 7 - EFEITO FOTOELÉTRICO -->
         <section>
             <h2>4. Tecnociência – O Problema do Efeito Fotoelétrico</h2>
-            
-            <h3>Contexto Histórico</h3>
-            <p>Na virada do século XIX para o XX, a física clássica acreditava que a luz era puramente uma onda contínua. Contudo, nos experimentos do efeito fotoelétrico, a emissão de elétrons nos metais não dependia do brilho (intensidade) da luz, mas sim da sua <strong>frequência (cor)</strong>.</p>
-
-            <h3>Cientistas Envolvidos e Solução</h3>
-            <ul>
-                <li><strong>Heinrich Hertz (1887):</strong> Descobriu o fenômeno acidentalmente.</li>
-                <li><strong>Philipp Lenard (1902):</strong> Mapeou experimentalmente a relação entre frequência e energia dos elétrons.</li>
-                <li><strong>Albert Einstein (1905):</strong> Explicou o enigma propondo que a luz é formada por pacotes discretos de energia chamados <strong>fótons</strong>. Essa contribuição rendeu a Einstein o Prêmio Nobel de Física em 1921 e consolidou o conceito da <strong>dualidade onda-partícula</strong>.</li>
-            </ul>
-
-            <div class="media-box">
-                <p><strong>[ Insira aqui a Imagem Representativa do Efeito Fotoelétrico / Fótons atingindo o metal ]</strong></p>
-                <figcaption>Figura 4: Fótons transferindo energia para a ejeção de elétrons da placa metálica.</figcaption>
-            </div>
-
-            <h3>Conexão com a Robótica</h3>
-            <p>O efeito fotoelétrico e a física quântica são os fundamentos diretos dos dispositivos modernos: enquanto os painéis fotovoltaicos e os sensores LDR convertem luz em corrente elétrica, os LEDs fazem o caminho inverso (eletroluminescência), convertendo corrente elétrica em luz.</p>
+            <p>No final do século XIX, a física clássica não conseguia explicar por que a emissão de elétrons em metais dependia da frequência (cor) da luz e não da sua intensidade. Em 1905, Albert Einstein resolveu o problema propondo que a luz é formada por pacotes discretos de energia chamados fótons, comprovando a dualidade onda-partícula e ganhando o Nobel de Física em 1921.</p>
         </section>
 
-        <!-- USO DA INTELIGÊNCIA ARTIFICIAL E CONCLUSÃO -->
+        <!-- SEÇÃO 5: CONCLUSÃO E REGISTROS -->
         <section>
-            <h2>5. Uso da Inteligência Artificial e Conclusão</h2>
-            
-            <h3>Uso da Inteligência Artificial</h3>
-            <p>A Inteligência Artificial foi utilizada para organizar as etapas do trabalho, estruturar tópicos históricos e otimizar a lógica de programação no Tinkercad. Todas as respostas fornecidas foram conferidas e validadas em fontes de autoridade científica e livros didáticos.</p>
-
-            <h3>Conclusão</h3>
-            <p>Compreender o comportamento da luz, a modulação de brilho (PWM) e a mistura de cores (RGB) demonstra que a Física e a Robótica desempenham papéis centrais na inclusão social. A união entre programação, sensores e conceitos ópticos permite desenvolver ambientes e tecnologias adaptáveis, garantindo maior autonomia, segurança e independência para pessoas com baixa visão.</p>
-
-            <h3>Referências (Normas ABNT)</h3>
-            <ul>
-                <li>ARDUINO. <em>Documentation and Reference Guidelines</em>. Disponível em: &lt;https://docs.arduino.cc&gt;. Acesso em: 2026.</li>
-                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
-                <li>NATIONAL EYE INSTITUTE. <em>Low Vision Information and Resources</em>. Disponível em: &lt;https://www.nei.nih.gov&gt;. Acesso em: 2026.</li>
-                <li>ORGANIZAÇÃO MUNDIAL DA SAÚDE (OMS). <em>Blindness and Vision Impairment</em>. Suíça, 2023.</li>
-            </ul>
+            <h2>5. Uso da IA e Conclusão</h2>
+            <p>A Inteligência Artificial foi utilizada como ferramenta de apoio para estruturar o texto, organizar a lógica dos experimentos e verificar os conceitos científicos, sendo todas as informações validadas em fontes de referência acadêmica.</p>
         </section>
 
     </main>
 
-    <!-- SCRIPT JS PARA RECURSOS DE ACESSIBILIDADE -->
     <script>
         function alterarFonte(delta) {
             const body = document.body;
