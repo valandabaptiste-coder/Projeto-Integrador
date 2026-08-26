@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador - Óptica, Robótica e Acessibilidade</title>
+    <title>Grupo 7 - O Problema do Efeito Fotoelétrico</title>
     <style>
-        /* Estilos Globais e Acessibilidade */
         :root {
             --bg-color: #ffffff;
             --text-color: #222222;
@@ -25,7 +24,6 @@
             padding: 20px;
         }
 
-        /* Classe de Alto Contraste para Acessibilidade */
         body.alto-contraste {
             --bg-color: #000000;
             --text-color: #ffff00;
@@ -34,7 +32,6 @@
             --border-color: #ffff00;
         }
 
-        /* Barra de Ferramentas de Acessibilidade */
         .toolbar-acessibilidade {
             position: sticky;
             top: 0;
@@ -46,6 +43,7 @@
             gap: 10px;
             align-items: center;
             z-index: 1000;
+            border-radius: 6px;
         }
 
         .btn-acessivel {
@@ -58,11 +56,10 @@
             border-radius: 4px;
         }
 
-        /* Estrutura do Conteúdo */
         section {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 25px;
             border-radius: 8px;
         }
@@ -71,42 +68,37 @@
             color: var(--primary-color);
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-
-        table, th, td {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            text-align: left;
-        }
-
-        /* Reservas para Mídias (Imagens e Vídeos) */
-        .bloco-imagem, .bloco-video {
+        .media-box {
             border: 2px dashed var(--border-color);
-            padding: 15px;
+            padding: 20px;
             text-align: center;
-            margin: 15px 0;
-            background-color: rgba(0,0,0,0.03);
+            margin: 20px 0;
+            background-color: rgba(0,0,0,0.02);
+            border-radius: 6px;
         }
 
-        .bloco-imagem img {
+        .media-box img {
             max-width: 100%;
             height: auto;
         }
 
         figcaption {
             font-style: italic;
-            margin-top: 5px;
+            margin-top: 8px;
             font-size: 0.9em;
+        }
+
+        .curiosidade-box {
+            background-color: rgba(0, 86, 179, 0.08);
+            border-left: 5px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
-    <!-- BARRA DE ACESSIBILIDADE -->
     <div class="toolbar-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
         <span><strong>Acessibilidade:</strong></span>
         <button class="btn-acessivel" onclick="alterarFonte(2)">A+</button>
@@ -117,122 +109,106 @@
 
     <main id="conteudo-principal">
 
-        <h1>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</h1>
+        <!-- TÍTULO DO TEMA -->
+        <h1>Grupo 7: O Problema do Efeito Fotoelétrico</h1>
 
-        <!-- SEÇÃO 1: INTRODUÇÃO À ÓPTICA -->
+        <!-- TEXTO EXPLICATIVO INICIAL -->
         <section>
-            <h2>1. Introdução à Óptica</h2>
-            <p>A Óptica é o ramo da Física que estuda a luz, seus fenômenos de propagação, reflexão, refração e sua interação com a matéria. Compreender a luz é fundamental para entender o funcionamento da visão humana e o desenvolvimento de tecnologias do cotidiano.</p>
+            <h2>Texto Explicativo</h2>
+            <p>O efeito fotoelétrico é o fenômeno em que elétrons são ejetados da superfície de um material condutor quando ele é atingido por radiação eletromagnética, como a luz. Embora pareça simples, esse processo colocou em xeque as certezas da Física no final do século XIX, pois os resultados observados em laboratório não podiam ser explicados pela teoria de que a luz era apenas uma onda contínua. Essa contradição foi o gatilho para o surgimento da Física Quântica.</p>
+        </section>
+
+        <!-- A. CONTEXTO HISTÓRICO -->
+        <section>
+            <h2>A. Contexto Histórico</h2>
             <ul>
-                <li><strong>Reflexão da Luz:</strong> Ocorre quando a luz atinge uma superfície e retorna ao meio de origem, permitindo a formação de imagens em espelhos.</li>
-                <li><strong>Refração da Luz:</strong> Fenômeno em que a luz muda de velocidade ao passar de um meio transparente para outro, como do ar para a água ou para lentes de óculos.</li>
+                <li><strong>Período Histórico:</strong> Transição do final do século XIX para o início do século XX (descoberto experimentalmente em 1887 por Heinrich Hertz e medido em detalhes em 1902 por Philipp Lenard).</li>
+                <li><strong>O que os cientistas acreditavam sobre a luz:</strong> Havia a convicção absoluta de que a luz possuía uma natureza estritamente ondulatória contínua, consolidada pelas equações de James Clerk Maxwell e comprovada por fenômenos como refração, difração e interferência.</li>
+                <li><strong>Qual problema estava sendo investigado:</strong> Os cientistas tentavam entender como a luz transferia energia para os elétrons de um metal. Pela física clássica, aumentar a intensidade (brilho) da luz deveria acumular energia continuamente no metal até "empurrar" os elétrons para fora, independentemente da cor da luz. Contudo, os experimentos mostravam o oposto: a ejeção dos elétrons dependia exclusivamente da frequência (cor) da luz, e não da sua intensidade.</li>
             </ul>
         </section>
 
-        <!-- SEÇÃO 2: ROBÓTICA E TECNOCIÊNCIA -->
+        <!-- B. CIENTISTA(S) ENVOLVIDO(S) -->
         <section>
-            <h2>2. Robótica, Sensores e Controle de Luz</h2>
-            <p>A robótica moderna depende dos princípios da óptica. O controle de iluminação por meio do Arduino e circuitos eletrônicos permite desenvolver tecnologias que promovem a acessibilidade para pessoas com baixa visão ou fotofobia.</p>
-
-            <h3>Experimentos de Robótica Simulados (Tinkercad):</h3>
-            
-            <article>
-                <h4>Atividade 1 – Disco de Newton (Síntese da Luz)</h4>
-                <p>O experimento demonstrou a síntese aditiva da luz. Ao girar o disco colorido em alta velocidade, a <strong>persistência retiniana</strong> funde as cores na retina, criando a percepção da luz branca.</p>
-                
-                <div class="bloco-imagem">
-                    <!-- COLOQUE SUA IMAGEM AQUI -->
-                    <p><em>[Insira aqui a Foto do Disco de Newton]</em></p>
-                    <figcaption>Figura 1: Montagem do Disco de Newton e fusão das cores.</figcaption>
-                </div>
-            </article>
-
-            <article>
-                <h4>Atividade 2 – Controle de Brilho (LED Fade-In e Fade-Out)</h4>
-                <p>Utilizando a técnica de <strong>PWM (Modulação por Largura de Pulso)</strong> com o comando <code>analogWrite()</code> no Arduino, é possível ajustar suavemente a intensidade luminosa para evitar ofuscamento e fadiga visual.</p>
-                
-                <div class="bloco-imagem">
-                    <!-- COLOQUE SUA IMAGEM AQUI -->
-                    <p><em>[Insira aqui a Captura de Tela do Circuito no Tinkercad]</em></p>
-                    <figcaption>Figura 2: Circuito Arduino com controle PWM no Tinkercad.</figcaption>
-                </div>
-
-                <div class="bloco-video">
-                    <!-- COLOQUE SEU VÍDEO AQUI -->
-                    <p><em>[Insira aqui o Vídeo da Simulação funcionando]</em></p>
-                </div>
-            </article>
-
-            <article>
-                <h4>Atividade 3 – Mistura de Cores com LED RGB</h4>
-                <p>A variação proporcional dos canais Vermelho, Verde e Azul (RGB) permite gerar qualquer cor do espectro visível. O alto contraste cromático resultante é essencial para a orientação visual e leitura na baixa visão.</p>
-            </article>
-
-            <h3>Tecnologias Assistivas Existentes</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Tecnologia</th>
-                        <th>Fabricante</th>
-                        <th>Princípio Científico</th>
-                        <th>Benefício</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Lâmpadas Philips Hue</td>
-                        <td>Philips</td>
-                        <td>Controle de Intensidade Luminosa</td>
-                        <td>Maior conforto visual</td>
-                    </tr>
-                    <tr>
-                        <td>Apple True Tone</td>
-                        <td>Apple</td>
-                        <td>Sensor de Luz Ambiente + Espectro</td>
-                        <td>Redução da fadiga visual</td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>B. Cientista(s) Envolvido(s)</h2>
+            <p>Apesar de Heinrich Hertz ter observado o fenômeno e Philipp Lenard ter medido suas propriedades, o cientista chave que resolveu o problema teórico foi <strong>Albert Einstein</strong>.</p>
+            <ul>
+                <li><strong>Período em que viveu:</strong> Nascido na Alemanha, viveu de 14 de março de 1879 a 18 de abril de 1955.</li>
+                <li><strong>Principal contribuição para o estudo da luz:</strong> Em 1905, Einstein explicou o efeito fotoelétrico propondo que a luz é formada por pacotes discretos e individualizados de energia, chamados <em>quanta de luz</em> (mais tarde denominados <strong>fótons</strong>). Por essa explicação revolucionária, ele recebeu o Prêmio Nobel de Física em 1921.</li>
+            </ul>
         </section>
 
-        <!-- SEÇÃO 3: GRUPO 7 - EFEITO FOTOELÉTRICO -->
+        <!-- C. A IDEIA SOBRE A LUZ -->
         <section>
-            <h2>3. Grupo 7 – O Problema do Efeito Fotoelétrico</h2>
-            <p><strong>Texto explicativo:</strong> O efeito fotoelétrico é a emissão de elétrons por uma superfície metálica atingida por radiação eletromagnética. Esse fenômeno colocou em xeque a física clássica e deu origem à Física Quântica.</p>
+            <h2>C. A Ideia sobre a Luz</h2>
+            <p>Para entender de forma simples: imagine que a luz não é como um fluxo contínuo de água de uma mangueira, mas sim como um disparo de pequenas bolinhas de energia chamadas <strong>fótons</strong>.</p>
+            <p>Cada fóton carrega uma quantidade fixa de energia que depende exclusivamente da sua cor (frequência). A luz vermelha possui fótons "fracos" (baixa frequência), enquanto a luz ultravioleta possui fótons "fortes" (alta frequência). A colisão entre a luz e o metal ocorre de forma individual: <strong>1 fóton colide com 1 elétron</strong>. Se o fóton individual não tiver a energia mínima necessária, nenhum elétron é liberado — não importa o quão forte seja o brilho da lâmpada.</p>
+        </section>
 
-            <div class="bloco-imagem">
-                <!-- COLOQUE SUA IMAGEM AQUI -->
-                <p><em>[Insira aqui o Esquema do Efeito Fotoelétrico / Fótons e Elétrons]</em></p>
-                <figcaption>Figura 3: Interação de fótons e ejeção de elétrons na placa metálica.</figcaption>
+        <!-- D. EVIDÊNCIAS -->
+        <section>
+            <h2>D. Experimento, Observação e Evidências</h2>
+            <p>Nos experimentos de laboratório, quando a luz ultravioleta incidia sobre uma placa de zinco eletrizada negativamente, a placa se descarregava instantaneamente. Porém, ao incidir uma luz vermelha extremamente intensa, nenhum elétron era ejetado.</p>
+
+            <div class="media-box">
+                <!-- SUBSTITUA PELA SUA IMAGEM DEPOIS -->
+                <p><strong>[ Insira aqui a Imagem ou Esquema do Efeito Fotoelétrico ]</strong></p>
+                <figcaption>Figura 1: Fótons de alta frequência atingindo a superfície metálica e liberando elétrons.</figcaption>
             </div>
 
-            <h3>Contexto Histórico e Solução</h3>
-            <ul>
-                <li><strong>O Problema:</strong> A física clássica acreditava que a luz era apenas uma onda contínua. Porém, os experimentos mostravam que a ejeção de elétrons dependia exclusivamente da <strong>frequência (cor)</strong> da luz e não da sua intensidade.</li>
-                <li><strong>Cientistas:</strong> Descoberto por Heinrich Hertz e medido por Philipp Lenard, foi explicado em 1905 por <strong>Albert Einstein</strong> (Prêmio Nobel de 1921), propondo que a luz é formada por pacotes de energia chamados <strong>fótons</strong>.</li>
-                <li><strong>Dualidade Onda-Partícula:</strong> A luz propaga-se no espaço como onda, mas interage com a matéria como partícula.</li>
-            </ul>
-
-            <p><strong>Conexão com a Robótica:</strong> O efeito fotoelétrico é o princípio inverso do funcionamento dos LEDs e a base direta de painéis solares e sensores LDR utilizados no Arduino.</p>
+            <p><strong>As evidências que questionavam a teoria ondulatória clássica foram:</strong></p>
+            <ol>
+                <li>A emissão de elétrons era imediata, sem necessidade de tempo para "acumular" energia.</li>
+                <li>Luz abaixo de uma determinada frequência crítica (como a luz vermelha em certos metais) jamais arrancava elétrons, independentemente de sua intensidade ou tempo de exposição.</li>
+                <li>Aumentar a intensidade da luz adequada apenas aumentava a quantidade de elétrons liberados, mas não a energia individual de cada elétron.</li>
+            </ol>
         </section>
 
-        <!-- SEÇÃO 4: REGISTRO DE IA E FONTES -->
+        <!-- E. IMPORTÂNCIA PARA A FÍSICA -->
         <section>
-            <h2>4. Como Utilizamos a IA?</h2>
-            <p>Utilizamos a ferramenta de inteligência artificial para auxiliar na síntese do contexto histórico, organização da estrutura dos textos e geração do código de acessibilidade. Todas as informações científicas foram comparadas e verificadas em livros didáticos e fontes confiáveis antes da publicação.</p>
+            <h2>E. Importância para a Física</h2>
+            <p>Essa descoberta foi um dos marcos mais importantes da história da ciência porque provou que o modelo ondulatório clássico de Maxwell era incompleto para explicar a interação da luz com a matéria em nível atômico. Ela confirmou a hipótese quântica sugerida por Max Planck em 1900 e deu origem à <strong>Física Quântica</strong>, introduzindo o conceito definitivo da <strong>dualidade onda-partícula</strong> (a luz se propaga pelo espaço como onda, mas interage com a matéria como partícula).</p>
+        </section>
 
-            <h3>Referências (ABNT)</h3>
+        <!-- F. CONEXÃO COM A FÍSICA ATUAL -->
+        <section>
+            <h2>F. Conexão com a Física Atual</h2>
+            <p>O princípio do efeito fotoelétrico é amplamente aplicado em tecnologias modernas do nosso dia a dia:</p>
             <ul>
-                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
-                <li>ARDUINO. <em>Documentação Oficial</em>. Disponível em: &lt;https://docs.arduino.cc&gt;.</li>
+                <li><strong>Painéis Solares Fotovoltaicos:</strong> Convertem a luz do Sol diretamente em energia elétrica através do efeito fotoelétrico.</li>
+                <li><strong>Sensores de Luz e Sensores LDR:</strong> Utilizados em automação e robótica (como no Arduino) para acionar iluminação pública e detectar obstáculos.</li>
+                <li><strong>Sensores de Câmeras Digitais (CCD/CMOS):</strong> Convertem os fótons de luz que entram pela lente em sinais elétricos para formar imagens digitais.</li>
+                <li><strong>LEDs:</strong> Funcionam pelo processo inverso do efeito fotoelétrico (eletroluminescência), onde a corrente elétrica é convertida em fótons de luz.</li>
+            </ul>
+        </section>
+
+        <!-- CURIOSIDADE -->
+        <section>
+            <h2>💡 Curiosidade</h2>
+            <div class="curiosidade-box">
+                <p>Embora Albert Einstein seja mundialmente famoso pela Teoria da Relatividade e pela equação $E = mc^2$, ele ganhou o seu único **Prêmio Nobel de Física em 1921** especificamente por sua explicação teórica do efeito fotoelétrico!</p>
+            </div>
+        </section>
+
+        <!-- REGISTRO DO USO DA IA -->
+        <section>
+            <h2>Como utilizamos a IA?</h2>
+            <p>Utilizamos a ferramenta de inteligência artificial Gemini para auxiliar na organização da estrutura dos tópicos conforme exigido pelo roteiro do projeto, além de adaptar os conceitos teóricos da Física Quântica para uma linguagem acessível ao Ensino Médio. Todas as informações históricas e científicas fornecidas pela IA foram comparadas e verificadas em livros didáticos de Física e fontes confiáveis antes da publicação no site.</p>
+        </section>
+
+        <!-- FONTES CONSULTADAS -->
+        <section>
+            <h2>Fontes Consultadas (ABNT)</h2>
+            <ul>
+                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <strong>Fundamentos de Física: Óptica e Física Moderna</strong>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
+                <li>NUSSENZVEIG, H. Moysés. <strong>Curso de Física Básica: Ótica, Relatividade e Física Quântica</strong>. Vol. 4. São Paulo: Blucher, 2014.</li>
+                <li>INSTITUTO DE FÍSICA DA USP (IFUSP). <strong>Materiais Didáticos sobre Efeito Fotoelétrico e Física Moderna</strong>. Disponível em: &lt;https://www.if.usp.br&gt;. Acesso em: 2026.</li>
             </ul>
         </section>
 
     </main>
 
-    <!-- SCRIPT DE FUNCIONAMENTO DA ACESSIBILIDADE -->
     <script>
-        // Função para Aumentar/Diminuir Texto
         function alterarFonte(delta) {
             const body = document.body;
             const style = window.getComputedStyle(body).getPropertyValue('font-size');
@@ -240,12 +216,10 @@
             body.style.fontSize = (currentSize + delta) + 'px';
         }
 
-        // Função para Alternar Alto Contraste
         function alternarContraste() {
             document.body.classList.toggle('alto-contraste');
         }
 
-        // Função para Leitura de Texto por Voz
         function lerTexto() {
             const texto = document.getElementById('conteudo-principal').innerText;
             const speech = new SpeechSynthesisUtterance(texto);
