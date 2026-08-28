@@ -3,247 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</title>
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #222222;
-            --primary-color: #0056b3;
-            --card-bg: #f8f9fa;
-            --border-color: #cccccc;
-            --font-size-base: 16px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-size: var(--font-size-base);
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-
-        body.alto-contraste {
-            --bg-color: #000000;
-            --text-color: #ffff00;
-            --primary-color: #ffff00;
-            --card-bg: #111111;
-            --border-color: #ffff00;
-        }
-
-        .toolbar-acessibilidade {
-            position: sticky;
-            top: 0;
-            background: var(--card-bg);
-            border: 2px solid var(--border-color);
-            padding: 10px;
-            margin-bottom: 20px;
-            display: flex;
-            gap: 10px;
-            align-items: center;
-            z-index: 1000;
-            border-radius: 6px;
-        }
-
-        .btn-acessivel {
-            background-color: var(--primary-color);
-            color: var(--bg-color);
-            border: 2px solid var(--border-color);
-            padding: 8px 16px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        section {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border-color);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-        }
-
-        h1, h2, h3, h4 {
-            color: var(--primary-color);
-        }
-
-        .media-box {
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            text-align: center;
-            margin: 20px 0;
-            background-color: #ffffff;
-            border-radius: 6px;
-        }
-
-        .media-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        figcaption {
-            font-style: italic;
-            margin-top: 8px;
-            font-size: 0.9em;
-            color: var(--text-color);
-        }
-
-        .curiosidade-box {
-            background-color: rgba(0, 86, 179, 0.08);
-            border-left: 5px solid var(--primary-color);
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Meu Projeto</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="toolbar-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
-        <span><strong>Acessibilidade:</strong></span>
-        <button class="btn-acessivel" onclick="alterarFonte(2)">A+</button>
-        <button class="btn-acessivel" onclick="alterarFonte(-2)">A-</button>
-        <button class="btn-acessivel" onclick="alternarContraste()">Alto Contraste</button>
-        <button class="btn-acessivel" onclick="lerTexto()">Ouvir Texto</button>
-    </div>
+    <header>
+        <h1>Meu Meu Site</h1>
+        <p>Bem-vindo ao meu projeto!</p>
+    </header>
 
-    <main id="conteudo-principal">
+    <main class="galeria">
+        <!-- Substitua 'imagens/foto1.jpg' pelo caminho da sua imagem -->
+        <div class="card">
+            <img src="imagens/foto1.jpg" alt="Descrição da Imagem 1">
+            <h3>Título 1</h3>
+            <p>Descrição curta sobre esta imagem ou projeto.</p>
+        </div>
 
-        <h1>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</h1>
+        <div class="card">
+            <img src="imagens/foto2.jpg" alt="Descrição da Imagem 2">
+            <h3>Título 2</h3>
+            <p>Descrição curta sobre esta imagem ou projeto.</p>
+        </div>
 
-        <!-- SEÇÃO 1: INTRODUÇÃO À ÓPTICA -->
-        <section>
-            <h2>1. Introdução à Óptica</h2>
-            <p>A Óptica é a área da Física que estuda os fenômenos luminosos e a interação da luz com a matéria. Compreender a propagação, a variação de intensidade e o comportamento das cores da luz permite o desenvolvimento de soluções de iluminação e tecnologias assistivas fundamentais para garantir autonomia, segurança e conforto visual a pessoas com baixa visão e deficiência visual.</p>
-        </section>
-
-        <!-- SEÇÃO 2: ATIVIDADE 2 - FADE IN E FADE OUT -->
-        <section>
-            <h2>2. Robótica e Controle de Luz (Atividade 2 - Fade-In e Fade-Out)</h2>
-            
-            <h3>Apresentação da Atividade</h3>
-            <p>O objetivo desta atividade foi compreender como controlar a intensidade luminosa de um LED utilizando uma simulação no Tinkercad. Durante o experimento, aprendemos como a programação e os componentes eletrônicos variam gradualmente o brilho de uma fonte de luz, simulando os efeitos de fade-in e fade-out.</p>
-
-            <figure class="media-box">
-                <img src="foto_led_simples_1.png" alt="Circuito de LED com Arduino no Tinkercad conectado ao pino 9">
-                <figcaption><strong>Figura 1:</strong> Montagem do circuito no Tinkercad utilizando o Arduino Uno, um LED vermelho e um resistor de 220 Ω conectados ao pino digital PWM ~9 para variação de brilho.</figcaption>
-            </figure>
-
-            <figure class="media-box">
-                <img src="foto_led_simples_2.png" alt="Simulação de controle de brilho no Tinkercad conectado ao pino 10">
-                <figcaption><strong>Figura 2:</strong> Simulação da variação gradual do brilho do LED (Fade-In e Fade-Out) utilizando modulação por largura de pulso (PWM) através do comando <code>analogWrite()</code>.</figcaption>
-            </figure>
-
-            <h3>Explicação Científica</h3>
-            <p>O LED é um diodo emissor de luz que transforma energia elétrica em fótons. Seu brilho foi controlado pela técnica de <strong>PWM (Pulse Width Modulation)</strong>, alterando a porcentagem de tempo em que a corrente permanece ativa (Duty Cycle) para que o olho humano perceba diferentes níveis de luminosidade.</p>
-        </section>
-
-        <!-- SEÇÃO 3: ATIVIDADE 3 - LED RGB -->
-        <section>
-            <h2>3. Robótica e Estudo das Cores (Atividade 3 - LED RGB)</h2>
-            
-            <h3>Apresentação da Atividade</h3>
-            <p>O experimento utilizou o Tinkercad para simular o controle de um LED RGB com Arduino e potenciômetro. Variando a intensidade individual dos canais Vermelho, Verde e Azul por meio do código, obtivemos diferentes combinações de cores no espectro visível para aplicação em acessibilidade.</p>
-
-            <figure class="media-box">
-                <img src="foto_led_rgb.png" alt="Circuito com LED RGB e Potenciômetro no Tinkercad">
-                <figcaption><strong>Figura 3:</strong> Circuito no Tinkercad com LED RGB de 4 pinos, resistor e potenciômetro conectados aos pinos PWM do Arduino Uno para controle da mistura aditiva de cores.</figcaption>
-            </figure>
-
-            <h3>Explicação Científica</h3>
-            <p>O LED RGB reúne três diodos (Vermelho, Verde e Azul) em um único componente. O modelo aditivo de cores (RGB) combina essas três luzes primárias para gerar qualquer cor do espectro, permitindo criar sinalizações visuais de alto contraste para pessoas com acuidade visual reduzida.</p>
-        </section>
-
-        <!-- SEÇÃO 4: TECNOCIÊNCIA - GRUPO 7: O PROBLEMA DO EFEITO FOTOELÉTRICO -->
-        <section>
-            <h2>4. Tecnociência – Grupo 7: O Problema do Efeito Fotoelétrico</h2>
-
-            <h3>Texto Explicativo Inicial</h3>
-            <p>O efeito fotoelétrico é a ejeção de elétrons da superfície de um material condutor (geralmente um metal) quando ele é atingido por luz. Embora pareça simples, esse fenômeno gerou uma crise na física no início do século XX, pois os resultados experimentais não batiam com a teoria de que a luz era apenas uma onda contínua.</p>
-
-            <h3>A. Contexto Histórico</h3>
-            <ul>
-                <li><strong>Período Histórico:</strong> Transição do final do século XIX para o início do século XX (observado em 1887 por Heinrich Hertz e medido experimentalmente em 1902 por Philipp Lenard).</li>
-                <li><strong>O que os cientistas acreditavam sobre a luz:</strong> Acreditava-se com certeza absoluta que a luz era estritamente uma <em>onda eletromagnética contínua</em>, conforme previam as equações de James Clerk Maxwell.</li>
-                <li><strong>Qual problema estava sendo investigado:</strong> Como a luz transfere energia para os elétrons de um metal. Pela teoria ondulatória, aumentar a intensidade (brilho) de qualquer luz deveria acumular energia no metal até expelir os elétrons. No entanto, os experimentos mostravam que a ejeção dependia unicamente da <strong>frequência (cor)</strong> da luz, e não da sua intensidade.</li>
-            </ul>
-
-            <h3>B. Cientista(s) Envolvido(s)</h3>
-            <ul>
-                <li><strong>Heinrich Hertz (1857–1894):</strong> Descobriu o efeito fotoelétrico acidentalmente em 1887 durante seus experimentos com ondas eletromagnéticas.</li>
-                <li><strong>Philipp Lenard (1862–1947):</strong> Mapeou detalhadamente a relação entre a frequência da luz e a energia dos elétrons ejetados em 1902.</li>
-                <li><strong>Albert Einstein (1879–1955):</strong> Apresentou a solução teórica em 1905, propondo que a luz é formada por pacotes discretos de energia (fótons). Essa contribuição rendeu a ele o <strong>Prêmio Nobel de Física em 1921</strong>.</li>
-            </ul>
-
-            <h3>C. A Ideia sobre a Luz</h3>
-            <p>Para entender de forma simples: a luz não funciona como um fluxo contínuo de água de uma mangueira, mas sim como um disparo de pequenas bolinhas de energia chamadas <strong>fótons</strong>.</p>
-            <p>Cada fóton carrega uma quantidade fixa de energia proporcional à sua cor. A luz vermelha possui fótons "fracos", enquanto a luz ultravioleta possui fótons "fortes". A colisão no metal ocorre de forma individual: <strong>1 fóton colide com 1 elétron</strong>. Se o fóton individual não tiver a energia mínima necessária, nenhum elétron é ejetado — independentemente do brilho da lâmpada.</p>
-
-            <h3>D. Evidências</h3>
-            <p>As evidências experimentais que questionaram a teoria ondulatória foram:</p>
-            <ul>
-                <li>A emissão de elétrons ocorria de forma instantânea, sem tempo de "acúmulo" de energia.</li>
-                <li>Luzes abaixo de uma frequência mínima (como a luz vermelha em certos metais) nunca ejetavam elétrons, mesmo se ficassem ligadas por horas com intensidade máxima.</li>
-                <li>Aumentar a intensidade da luz adequada aumentava apenas a <em>quantidade</em> de elétrons liberados, mas não a energia individual de cada elétron.</li>
-            </ul>
-
-            <h3>E. Importância para a Física</h3>
-            <p>Essa descoberta foi um dos pilares fundadores da <strong>Física Quântica</strong>. Ela provou que a visão clássica da luz era incompleta e estabeleceu o conceito da <strong>dualidade onda-partícula</strong>: a luz se propaga pelo espaço como onda, mas se comporta como partícula (fóton) ao interagir com a matéria.</p>
-
-            <h3>F. Conexão com a Física Atual e Robótica</h3>
-            <p>O efeito fotoelétrico e os princípios quânticos estão diretamente ligados à robótica e à eletrônica moderna:</p>
-            <ul>
-                <li><strong>Painéis Solares Fotovoltaicos:</strong> Convertem a luz solar diretamente em eletricidade por efeito fotoelétrico.</li>
-                <li><strong>Sensores LDR e Sensores de Luz:</strong> Usados na robótica (como no Arduino) para detectar iluminação ambiente.</li>
-                <li><strong>Câmeras Digitais (Sensores CCD/CMOS):</strong> Transformam fótons de luz incidente em sinais elétricos para gerar imagens.</li>
-                <li><strong>LEDs:</strong> Realizam o processo inverso (eletroluminescência), convertendo corrente elétrica em fótons de luz.</li>
-            </ul>
-
-            <div class="curiosidade-box">
-                <p><strong>💡 Curiosidade:</strong> Albert Einstein não recebeu o Prêmio Nobel pela famosa Teoria da Relatividade, mas sim por ter explicado a lei do efeito fotoelétrico!</p>
-            </div>
-        </section>
-
-        <!-- SEÇÃO 5: USO DA IA E CONCLUSÃO -->
-        <section>
-            <h2>5. Uso da Inteligência Artificial e Conclusão</h2>
-            
-            <h3>Como utilizamos a IA?</h3>
-            <p>Utilizamos ferramentas de Inteligência Artificial para auxiliar na estruturação do conteúdo conforme o roteiro solicitado, organizar a explicação dos experimentos no Tinkercad e sintetizar conceitos da Física Quântica em linguagem acessível. Todas as informações teóricas e históricas foram devidamente validadas em fontes e livros didáticos de Física.</p>
-
-            <h3>Conclusão</h3>
-            <p>Compreender o comportamento da luz, a modulação de brilho (PWM) e a síntese aditiva de cores (RGB) demonstra como a Física e a Robótica caminham juntas na criação de soluções inclusivas. Projetos focados em controle de iluminação garantem maior autonomia, conforto e segurança para pessoas com baixa visão.</p>
-
-            <h3>Fontes Consultadas (ABNT)</h3>
-            <ul>
-                <li>ARDUINO. <strong>Documentation and Reference Guidelines</strong>. Disponível em: &lt;https://docs.arduino.cc&gt;. Acesso em: 2026.</li>
-                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <strong>Fundamentos de Física: Óptica e Física Moderna</strong>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
-                <li>NATIONAL EYE INSTITUTE. <strong>Low Vision Information and Resources</strong>. Disponível em: &lt;https://www.nei.nih.gov&gt;. Acesso em: 2026.</li>
-            </ul>
-        </section>
-
+        <div class="card">
+            <img src="imagens/foto3.jpg" alt="Descrição da Imagem 3">
+            <h3>Título 3</h3>
+            <p>Descrição curta sobre esta imagem ou projeto.</p>
+        </div>
     </main>
 
-    <script>
-        function alterarFonte(delta) {
-            const body = document.body;
-            const style = window.getComputedStyle(body).getPropertyValue('font-size');
-            const currentSize = parseFloat(style);
-            body.style.fontSize = (currentSize + delta) + 'px';
-        }
+    <footer>
+        <p>&copy; 2026 - Desenvolvido por mim</p>
+    </footer>
 
-        function alternarContraste() {
-            document.body.classList.toggle('alto-contraste');
-        }
-
-        function lerTexto() {
-            const texto = document.getElementById('conteudo-principal').innerText;
-            const speech = new SpeechSynthesisUtterance(texto);
-            speech.lang = 'pt-BR';
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
 </body>
 </html>
