@@ -1,65 +1,94 @@
+/* Configurações Globais e Transição Suave */
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    font-size: 16px;
+    background-color: #f8f9fa;
+    color: #212529;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
-header {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
+/* Barra de Acessibilidade Sticky */
+.barra-acessibilidade {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+    background: #ffffff;
+    border-bottom: 3px solid #0056b3;
+    padding: 12px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.btn-acessivel {
+    min-height: 48px;
+    min-width: 48px;
+    font-weight: bold;
 }
 
-.card {
-    background: white;
+/* Indicador de Foco Acessível */
+button:focus, 
+a:focus, 
+[tabindex="-1"]:focus {
+    outline: 4px solid #ff0000 !important;
+    outline-offset: 2px;
+}
+
+/* Estilização dos Cards */
+.flashcard {
+    border: 3px solid #0056b3;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
-    width: 300px;
-    text-align: center;
-    padding-bottom: 1rem;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
 }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.flashcard:hover {
+    transform: translateY(-2px);
 }
 
-.card h3 {
-    margin: 10px 0 5px;
+/* Modo Alto Contraste (Cores Acessíveis conforme WCAG) */
+body.alto-contraste {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
 }
 
-.card p {
-    color: #666;
-    padding: 0 10px;
-    font-size: 0.9rem;
+body.alto-contraste .barra-acessibilidade {
+    background-color: #000000 !important;
+    border-bottom: 3px solid #ffff00 !important;
 }
 
-footer {
-    margin-top: auto;
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem;
+body.alto-contraste .header-title {
+    color: #ffff00 !important;
+}
+
+body.alto-contraste .flashcard {
+    background-color: #000000 !important;
+    border: 3px solid #ffff00 !important;
+    color: #ffff00 !important;
+}
+
+body.alto-contraste .btn-outline-primary {
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+    background-color: #000000 !important;
+}
+
+body.alto-contraste .btn-outline-primary:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
+
+body.alto-contraste table {
+    color: #ffff00 !important;
+    border-color: #ffff00 !important;
+}
+
+body.alto-contraste thead {
+    background-color: #333333 !important;
 }
