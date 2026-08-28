@@ -165,72 +165,263 @@
         </header>
 
         <!-- SEÇÃO 1 -->
+   <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador - Óptica, Robótica e Acessibilidade</title>
+    <style>
+        /* Estilos Globais e Acessibilidade */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --primary-color: #0056b3;
+            --card-bg: #f8f9fa;
+            --border-color: #cccccc;
+            --font-size-base: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Classe de Alto Contraste para Acessibilidade */
+        body.alto-contraste {
+            --bg-color: #000000;
+            --text-color: #ffff00;
+            --primary-color: #ffff00;
+            --card-bg: #111111;
+            --border-color: #ffff00;
+        }
+
+        /* Barra de Ferramentas de Acessibilidade */
+        .toolbar-acessibilidade {
+            position: sticky;
+            top: 0;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            padding: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .btn-acessivel {
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            border: 2px solid var(--border-color);
+            padding: 8px 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Estrutura do Conteúdo */
+        section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        table, th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Reservas para Mídias (Imagens e Vídeos) */
+        .bloco-imagem, .bloco-video {
+            border: 2px dashed var(--border-color);
+            padding: 15px;
+            text-align: center;
+            margin: 15px 0;
+            background-color: rgba(0,0,0,0.03);
+        }
+
+        .bloco-imagem img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+            font-style: italic;
+            margin-top: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BARRA DE ACESSIBILIDADE -->
+    <div class="toolbar-acessibilidade" role="region" aria-label="Ferramentas de Acessibilidade">
+        <span><strong>Acessibilidade:</strong></span>
+        <button class="btn-acessivel" onclick="alterarFonte(2)">A+</button>
+        <button class="btn-acessivel" onclick="alterarFonte(-2)">A-</button>
+        <button class="btn-acessivel" onclick="alternarContraste()">Alto Contraste</button>
+        <button class="btn-acessivel" onclick="lerTexto()">Ouvir Texto</button>
+    </div>
+
+    <main id="conteudo-principal">
+
+        <h1>Projeto Integrador: Óptica, Robótica e Tecnociência Acessível</h1>
+
+        <!-- SEÇÃO 1: INTRODUÇÃO À ÓPTICA -->
         <section>
-            <h2>1. Aplicações da Óptica em Diversos Contextos</h2>
-            <div class="grid">
-                
-                <!-- Contexto Residencial -->
-                <article class="card">
-                    <h3>Contexto Residencial: Câmera do Celular</h3>
-                    <div class="img-placeholder" aria-label="Ilustração de lente convergente e sensor CMOS de smartphone">
-                        [ Imagem: Lente e Sensor CMOS ]
-                    </div>
-                    <p><strong>Como funciona:</strong> A luz refletida pelos objetos passa por um conjunto de lentes transparentes que curvam os raios luminosos até focá-los no sensor digital (CMOS), convertendo fótons de luz em sinais elétricos.</p>
-                    <p><strong>Onde aparece:</strong> Em smartphones, tablets e dispositivos portáteis de comunicação.</p>
-                    <p><strong>Princípio da Óptica:</strong> Refração da luz e formação de imagens por lentes convergentes.</p>
-                    <p><strong>Curiosidade:</strong> As lentes dos celulares modernos utilizam plásticos de altíssima precisão mais leves e finos que o vidro tradicional.</p>
-                    <p><strong>Acessibilidade:</strong> Permite o uso de aplicativos de reconhecimento visual para pessoas com deficiência visual (ex: leitura de texto em voz alta).</p>
-                    <p><em>Como a IA ajudou:</em> Auxiliou a simplificar a explicação técnica do funcionamento do sensor CMOS.</p>
-                    <p><small><strong>Fonte:</strong> HECHT, Eugene. Óptica. 5. ed. São Paulo: Pearson, 2017.</small></p>
-                </article>
-
-                <!-- Contexto Comercial -->
-                <article class="card">
-                    <h3>Contexto Comercial: Leitor de Código de Barras</h3>
-                    <div class="img-placeholder" aria-label="Ilustração do feixe de laser refletindo nas barras do código">
-                        [ Imagem: Leitor de Código de Barras ]
-                    </div>
-                    <p><strong>Como funciona:</strong> Um feixe de laser incide sobre as barras. As partes brancas refletem grande quantidade de luz, enquanto as barras pretas absorvem a luz. Um sensor fotoelétrico capta essa variação e a transforma em dados numéricos.</p>
-                    <p><strong>Onde aparece:</strong> Caixas de supermercados, lojas, pontos de autoatendimento e controle de estoque.</p>
-                    <p><strong>Princípio da Óptica:</strong> Reflexão difusa da luz e absorção seletiva.</p>
-                    <p><strong>Curiosidade:</strong> O primeiro produto escaneado no mundo foi um pacote de chicletes em 1974, nos Estados Unidos.</p>
-                    <p><strong>Acessibilidade:</strong> Facilita a identificação imediata de produtos e preços sem a necessidade de leitura de letras pequenas nas embalagens.</p>
-                    <p><em>Como a IA ajudou:</em> Ajudou na estrutura do texto curto explicativo.</p>
-                    <p><small><strong>Fonte:</strong> HALLIDAY, D.; RESNICK, R.; WALKER, J. Fundamentos de Física. Vol. 4. Rio de Janeiro: LTC, 2016.</small></p>
-                </article>
-
-                <!-- Contexto Escolar -->
-                <article class="card">
-                    <h3>Contexto Escolar: Microscópio Óptico</h3>
-                    <div class="img-placeholder" aria-label="Ilustração do trajeto da luz em um microscópio composto">
-                        [ Imagem: Microscópio Óptico ]
-                    </div>
-                    <p><strong>Como funciona:</strong> A luz atravessa uma lâmina transparente com a amostra. O conjunto de duas lentes (objetiva e ocular) amplia sucessivamente a imagem da amostra em centenas ou milhares de vezes.</p>
-                    <p><strong>Onde aparece:</strong> Laboratórios escolares, universidades e centros de pesquisa biológica.</p>
-                    <p><strong>Princípio da Óptica:</strong> Refração e dupla ampliação por associação de lentes convergentes.</p>
-                    <p><strong>Curiosidade:</strong> Anton van Leeuwenhoek, no século XVII, observou bactérias pela primeira vez usando microscópios com uma única lente polida à mão.</p>
-                    <p><strong>Acessibilidade:</strong> Microscópios digitais conectados a monitores permitem que alunos com baixa visão observem células com alto contraste e zoom ajustável.</p>
-                    <p><em>Como a IA ajudou:</em> Utilizada para buscar o contexto histórico da invenção do equipamento.</p>
-                    <p><small><strong>Fonte:</strong> NUSSENZVEIG, H. Moysés. Curso de Física Básica: Óptica. Vol. 4. Edgard Blücher, 2014.</small></p>
-                </article>
-
-                <!-- Contexto Industrial -->
-                <article class="card">
-                    <h3>Contexto Industrial: Corte a Laser</h3>
-                    <div class="img-placeholder" aria-label="Ilustração de laser focado cortando uma superfície">
-                        [ Imagem: Corte a Laser ]
-                    </div>
-                    <p><strong>Como funciona:</strong> Um feixe de luz laser de alta potência é focado por lentes ópticas em um ponto extremamente pequeno sobre a peça. A energia concentrada derrete ou evapora o material de forma precisa.</p>
-                    <p><strong>Onde aparece:</strong> Indústrias automobilísticas, metalúrgicas, fabricação de placas eletrônicas e corte de tecidos.</p>
-                    <p><strong>Princípio da Óptica:</strong> Emissão estimulada de radiação e focalização de feixe por lentes convergentes.</p>
-                    <p><strong>Curiosidade:</strong> A palavra LASER é uma sigla em inglês para "Light Amplification by Stimulated Emission of Radiation" (Amplificação da Luz por Emissão Estimulada de Radiação).</p>
-                    <p><strong>Acessibilidade:</strong> O corte laser permite a produção rápida de placas e mapas táteis com relevos precisos em braille.</p>
-                    <p><em>Como a IA ajudou:</em> Utilizada para revisar a explicação do princípio da emissão estimulada.</p>
-                    <p><small><strong>Fonte:</strong> Tipler, P. A.; Llewellyn, R. A. Física Moderna. 6. ed. Rio de Janeiro: LTC, 2014.</small></p>
-                </article>
-
-            </div>
+            <h2>1. Introdução à Óptica</h2>
+            <p>A Óptica é o ramo da Física que estuda a luz, seus fenômenos de propagação, reflexão, refração e sua interação com a matéria. Compreender a luz é fundamental para entender o funcionamento da visão humana e o desenvolvimento de tecnologias do cotidiano.</p>
+            <ul>
+                <li><strong>Reflexão da Luz:</strong> Ocorre quando a luz atinge uma superfície e retorna ao meio de origem, permitindo a formação de imagens em espelhos.</li>
+                <li><strong>Refração da Luz:</strong> Fenômeno em que a luz muda de velocidade ao passar de um meio transparente para outro, como do ar para a água ou para lentes de óculos.</li>
+            </ul>
         </section>
+
+        <!-- SEÇÃO 2: ROBÓTICA E TECNOCIÊNCIA -->
+        <section>
+            <h2>2. Robótica, Sensores e Controle de Luz</h2>
+            <p>A robótica moderna depende dos princípios da óptica. O controle de iluminação por meio do Arduino e circuitos eletrônicos permite desenvolver tecnologias que promovem a acessibilidade para pessoas com baixa visão ou fotofobia.</p>
+
+            <h3>Experimentos de Robótica Simulados (Tinkercad):</h3>
+            
+            <article>
+                <h4>Atividade 1 – Disco de Newton (Síntese da Luz)</h4>
+                <p>O experimento demonstrou a síntese aditiva da luz. Ao girar o disco colorido em alta velocidade, a <strong>persistência retiniana</strong> funde as cores na retina, criando a percepção da luz branca.</p>
+                
+                <div class="bloco-imagem">
+                    <!-- COLOQUE SUA IMAGEM AQUI -->
+                    <p><em>[Insira aqui a Foto do Disco de Newton]</em></p>
+                    <figcaption>Figura 1: Montagem do Disco de Newton e fusão das cores.</figcaption>
+                </div>
+            </article>
+
+            <article>
+                <h4>Atividade 2 – Controle de Brilho (LED Fade-In e Fade-Out)</h4>
+                <p>Utilizando a técnica de <strong>PWM (Modulação por Largura de Pulso)</strong> com o comando <code>analogWrite()</code> no Arduino, é possível ajustar suavemente a intensidade luminosa para evitar ofuscamento e fadiga visual.</p>
+                
+                <div class="bloco-imagem">
+                    <!-- COLOQUE SUA IMAGEM AQUI -->
+                    <p><em>[Insira aqui a Captura de Tela do Circuito no Tinkercad]</em></p>
+                    <figcaption>Figura 2: Circuito Arduino com controle PWM no Tinkercad.</figcaption>
+                </div>
+
+                <div class="bloco-video">
+                    <!-- COLOQUE SEU VÍDEO AQUI -->
+                    <p><em>[Insira aqui o Vídeo da Simulação funcionando]</em></p>
+                </div>
+            </article>
+
+            <article>
+                <h4>Atividade 3 – Mistura de Cores com LED RGB</h4>
+                <p>A variação proporcional dos canais Vermelho, Verde e Azul (RGB) permite gerar qualquer cor do espectro visível. O alto contraste cromático resultante é essencial para a orientação visual e leitura na baixa visão.</p>
+            </article>
+
+            <h3>Tecnologias Assistivas Existentes</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tecnologia</th>
+                        <th>Fabricante</th>
+                        <th>Princípio Científico</th>
+                        <th>Benefício</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lâmpadas Philips Hue</td>
+                        <td>Philips</td>
+                        <td>Controle de Intensidade Luminosa</td>
+                        <td>Maior conforto visual</td>
+                    </tr>
+                    <tr>
+                        <td>Apple True Tone</td>
+                        <td>Apple</td>
+                        <td>Sensor de Luz Ambiente + Espectro</td>
+                        <td>Redução da fadiga visual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SEÇÃO 3: GRUPO 7 - EFEITO FOTOELÉTRICO -->
+        <section>
+            <h2>3. Grupo 7 – O Problema do Efeito Fotoelétrico</h2>
+            <p><strong>Texto explicativo:</strong> O efeito fotoelétrico é a emissão de elétrons por uma superfície metálica atingida por radiação eletromagnética. Esse fenômeno colocou em xeque a física clássica e deu origem à Física Quântica.</p>
+
+            <div class="bloco-imagem">
+                <!-- COLOQUE SUA IMAGEM AQUI -->
+                <p><em>[Insira aqui o Esquema do Efeito Fotoelétrico / Fótons e Elétrons]</em></p>
+                <figcaption>Figura 3: Interação de fótons e ejeção de elétrons na placa metálica.</figcaption>
+            </div>
+
+            <h3>Contexto Histórico e Solução</h3>
+            <ul>
+                <li><strong>O Problema:</strong> A física clássica acreditava que a luz era apenas uma onda contínua. Porém, os experimentos mostravam que a ejeção de elétrons dependia exclusivamente da <strong>frequência (cor)</strong> da luz e não da sua intensidade.</li>
+                <li><strong>Cientistas:</strong> Descoberto por Heinrich Hertz e medido por Philipp Lenard, foi explicado em 1905 por <strong>Albert Einstein</strong> (Prêmio Nobel de 1921), propondo que a luz é formada por pacotes de energia chamados <strong>fótons</strong>.</li>
+                <li><strong>Dualidade Onda-Partícula:</strong> A luz propaga-se no espaço como onda, mas interage com a matéria como partícula.</li>
+            </ul>
+
+            <p><strong>Conexão com a Robótica:</strong> O efeito fotoelétrico é o princípio inverso do funcionamento dos LEDs e a base direta de painéis solares e sensores LDR utilizados no Arduino.</p>
+        </section>
+
+        <!-- SEÇÃO 4: REGISTRO DE IA E FONTES -->
+        <section>
+            <h2>4. Como Utilizamos a IA?</h2>
+            <p>Utilizamos a ferramenta de inteligência artificial para auxiliar na síntese do contexto histórico, organização da estrutura dos textos e geração do código de acessibilidade. Todas as informações científicas foram comparadas e verificadas em livros didáticos e fontes confiáveis antes da publicação.</p>
+
+            <h3>Referências (ABNT)</h3>
+            <ul>
+                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
+                <li>ARDUINO. <em>Documentação Oficial</em>. Disponível em: &lt;https://docs.arduino.cc&gt;.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT DE FUNCIONAMENTO DA ACESSIBILIDADE -->
+    <script>
+        // Função para Aumentar/Diminuir Texto
+        function alterarFonte(delta) {
+            const body = document.body;
+            const style = window.getComputedStyle(body).getPropertyValue('font-size');
+            const currentSize = parseFloat(style);
+            body.style.fontSize = (currentSize + delta) + 'px';
+        }
+
+        // Função para Alternar Alto Contraste
+        function alternarContraste() {
+            document.body.classList.toggle('alto-contraste');
+        }
+
+        // Função para Leitura de Texto por Voz
+        function lerTexto() {
+            const texto = document.getElementById('conteudo-principal').innerText;
+            const speech = new SpeechSynthesisUtterance(texto);
+            speech.lang = 'pt-BR';
+            window.speechSynthesis.speak(speech);
+        }
+    </script>
+</body>
+</html>
 
         <!-- SEÇÃO 2 -->
         <section>
