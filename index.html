@@ -362,67 +362,7 @@
             </table>
         </section>
 
-        <!-- SEÇÃO 3: GRUPO 7 - EFEITO FOTOELÉTRICO -->
-        <section>
-            <h2>3. Grupo 7 – O Problema do Efeito Fotoelétrico</h2>
-            <p><strong>Texto explicativo:</strong> O efeito fotoelétrico é a emissão de elétrons por uma superfície metálica atingida por radiação eletromagnética. Esse fenômeno colocou em xeque a física clássica e deu origem à Física Quântica.</p>
-
-            <div class="bloco-imagem">
-                <!-- COLOQUE SUA IMAGEM AQUI -->
-                <p><em>[Insira aqui o Esquema do Efeito Fotoelétrico / Fótons e Elétrons]</em></p>
-                <figcaption>Figura 3: Interação de fótons e ejeção de elétrons na placa metálica.</figcaption>
-            </div>
-
-            <h3>Contexto Histórico e Solução</h3>
-            <ul>
-                <li><strong>O Problema:</strong> A física clássica acreditava que a luz era apenas uma onda contínua. Porém, os experimentos mostravam que a ejeção de elétrons dependia exclusivamente da <strong>frequência (cor)</strong> da luz e não da sua intensidade.</li>
-                <li><strong>Cientistas:</strong> Descoberto por Heinrich Hertz e medido por Philipp Lenard, foi explicado em 1905 por <strong>Albert Einstein</strong> (Prêmio Nobel de 1921), propondo que a luz é formada por pacotes de energia chamados <strong>fótons</strong>.</li>
-                <li><strong>Dualidade Onda-Partícula:</strong> A luz propaga-se no espaço como onda, mas interage com a matéria como partícula.</li>
-            </ul>
-
-            <p><strong>Conexão com a Robótica:</strong> O efeito fotoelétrico é o princípio inverso do funcionamento dos LEDs e a base direta de painéis solares e sensores LDR utilizados no Arduino.</p>
-        </section>
-
-        <!-- SEÇÃO 4: REGISTRO DE IA E FONTES -->
-        <section>
-            <h2>4. Como Utilizamos a IA?</h2>
-            <p>Utilizamos a ferramenta de inteligência artificial para auxiliar na síntese do contexto histórico, organização da estrutura dos textos e geração do código de acessibilidade. Todas as informações científicas foram comparadas e verificadas em livros didáticos e fontes confiáveis antes da publicação.</p>
-
-            <h3>Referências (ABNT)</h3>
-            <ul>
-                <li>HALLIDAY, David; RESNICK, Robert; WALKER, Jearl. <em>Fundamentos de Física: Óptica e Física Moderna</em>. Vol. 4. 10. ed. Rio de Janeiro: LTC, 2016.</li>
-                <li>ARDUINO. <em>Documentação Oficial</em>. Disponível em: &lt;https://docs.arduino.cc&gt;.</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- SCRIPT DE FUNCIONAMENTO DA ACESSIBILIDADE -->
-    <script>
-        // Função para Aumentar/Diminuir Texto
-        function alterarFonte(delta) {
-            const body = document.body;
-            const style = window.getComputedStyle(body).getPropertyValue('font-size');
-            const currentSize = parseFloat(style);
-            body.style.fontSize = (currentSize + delta) + 'px';
-        }
-
-        // Função para Alternar Alto Contraste
-        function alternarContraste() {
-            document.body.classList.toggle('alto-contraste');
-        }
-
-        // Função para Leitura de Texto por Voz
-        function lerTexto() {
-            const texto = document.getElementById('conteudo-principal').innerText;
-            const speech = new SpeechSynthesisUtterance(texto);
-            speech.lang = 'pt-BR';
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
-</body>
-</html>
-
+        
         <!-- SEÇÃO 2 -->
         <section>
             <h2>2. Tecnociência: O Problema do Efeito Fotoelétrico</h2>
