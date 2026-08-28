@@ -3,40 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Projeto</title>
+    <title>Projeto Integrador - Soluções Tecnológicas e Acessibilidade</title>
+    <!-- Framework Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Meu Meu Site</h1>
-        <p>Bem-vindo ao meu projeto!</p>
+    <!-- Barra de Ferramentas de Acessibilidade (Fixa) -->
+    <header class="barra-acessibilidade" role="banner">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <h1 class="h5 m-0 header-title">Acessibilidade Digital</h1>
+            <nav class="d-flex gap-2" role="region" aria-label="Controles de Acessibilidade">
+                <button onclick="alterarFonte(2)" aria-label="Aumentar texto" class="btn btn-outline-primary btn-acessivel">A+</button>
+                <button onclick="alterarFonte(-2)" aria-label="Diminuir texto" class="btn btn-outline-primary btn-acessivel">A-</button>
+                <button onclick="alternarContraste()" aria-label="Alternar Alto Contraste" class="btn btn-outline-primary btn-acessivel">Alto Contraste</button>
+                <button onclick="lerTexto()" aria-label="Ouvir Conteúdo da Página" class="btn btn-outline-primary btn-acessivel">Ouvir Texto</button>
+                <button onclick="pararLeitura()" aria-label="Parar Leitura de Voz" class="btn btn-outline-danger btn-acessivel">Parar Voz</button>
+            </nav>
+        </div>
     </header>
 
-    <main class="galeria">
-        <!-- Substitua 'imagens/foto1.jpg' pelo caminho da sua imagem -->
-        <div class="card">
-            <img src="imagens/foto1.jpg" alt="Descrição da Imagem 1">
-            <h3>Título 1</h3>
-            <p>Descrição curta sobre esta imagem ou projeto.</p>
-        </div>
+    <!-- Conteúdo Principal -->
+    <main class="container my-4" id="conteudo-principal" tabindex="-1">
+        
+        <!-- Apresentação do Projeto -->
+        <section aria-labelledby="sec-introducao" class="mb-5">
+            <h2 id="sec-introducao" class="mb-3">Introdução Geral do Projeto</h2>
+            <p class="lead">
+                Este projeto articula Robótica, Tecnociência e Programação Web para desenvolver soluções tecnológicas 
+                voltadas à inclusão social de pessoas com baixa visão ou cegueira.
+            </p>
+        </section>
 
-        <div class="card">
-            <img src="imagens/foto2.jpg" alt="Descrição da Imagem 2">
-            <h3>Título 2</h3>
-            <p>Descrição curta sobre esta imagem ou projeto.</p>
-        </div>
+        <!-- Seção 1: Robótica e Controle Luminoso -->
+        <section aria-labelledby="sec-robotica" class="mb-5">
+            <h2 id="sec-robotica" class="mb-4">1. Robótica: Controle Luminoso e Síntese de Cores</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                
+                <article class="col">
+                    <div class="flashcard h-100">
+                        <h3>Controle PWM Arduino</h3>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0bL--6N1d41c888N3c4hZ1x_Y8gJj4z-4_g&s" 
+                             alt="Circuito eletrônico no Tinkercad contendo placa Arduino Uno conectada a um LED com resistor em protoboard." 
+                             class="img-fluid my-3 rounded">
+                        <p>Simulação no Tinkercad com recurso PWM para controle gradual de iluminação (0 a 255), prevenindo a fadiga ocular.</p>
+                    </div>
+                </article>
 
-        <div class="card">
-            <img src="imagens/foto3.jpg" alt="Descrição da Imagem 3">
-            <h3>Título 3</h3>
-            <p>Descrição curta sobre esta imagem ou projeto.</p>
-        </div>
+                <article class="col">
+                    <div class="flashcard h-100">
+                        <h3>Síntese Aditiva (LED RGB)</h3>
+                        <div class="placeholder-img my-3 d-flex align-items-center justify-content-center bg-light border rounded" style="height: 180px;">
+                            <span class="text-muted">[ Ilustração do Circuito LED RGB ]</span>
+                        </div>
+                        <p>Manipulação dos canais Vermelho, Verde e Azul via potenciômetros para gerar combinações cromáticas e alto contraste.</p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Seção 2: Tecnociência e Óptica Aplicada -->
+        <section aria-labelledby="sec-tecnociencia" class="mb-5">
+            <h2 id="sec-tecnociencia" class="mb-4">2. Tecnociência: Aplicações Ópticas e Efeito Fotoelétrico</h2>
+            <div class="table-responsive">
+                <table class="table table-bordered align-middle">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Contexto</th>
+                            <th scope="col">Dispositivo</th>
+                            <th scope="col">Princípio Óptico</th>
+                            <th scope="col">Impacto em Acessibilidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Residencial</strong></td>
+                            <td>Câmera do Smartphone</td>
+                            <td>Refração da luz e lentes convergentes</td>
+                            <td>Permite a leitura de texto em voz alta via IA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Comercial</strong></td>
+                            <td>Leitor de Código de Barras</td>
+                            <td>Reflexão difusa e absorção seletiva</td>
+                            <td>Identifica produtos sem necessidade de leitura visual.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Escolar</strong></td>
+                            <td>Microscópio Óptico Composto</td>
+                            <td>Dupla refração em lentes associadas</td>
+                            <td>Projeção em telas grandes com alto contraste para alunos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Industrial</strong></td>
+                            <td>Corte a Laser</td>
+                            <td>Emissão estimulada e focalização</td>
+                            <td>Produção de mapas táteis e sinalizações em Braille.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Desenvolvido por mim</p>
+    <!-- Rodapé -->
+    <footer class="text-center py-4 bg-dark text-white mt-auto">
+        <div class="container">
+            <p class="m-0">&copy; 2026 - Projeto Integrador Trimestral | Robótica, Tecnociência e Programação Web</p>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
